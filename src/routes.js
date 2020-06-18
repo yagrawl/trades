@@ -10,40 +10,11 @@ import Closed from './pages/closed';
 import Ticker from './pages/ticker';
 
 import NavBar from './components/navbar';
-import Password from './components/password';
 
 class Routes extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      auth: false,
-    };
-
-    this.getRoutes = this.getRoutes.bind(this);
-  }
-
-  updateAuth = data => {
-    if(data === 200) {
-      this.setState(
-        prevState => ({
-          ...prevState,
-          auth: true
-        })
-      );
-    } else {
-      this.setState(
-        prevState => ({
-          ...prevState,
-          auth: false
-        })
-      );
-    }
-  }
-
-  getRoutes() {
-    if(this.state.auth) {
-      return (
+  render() {
+    return (
+      <Router>
         <div className="wrapper">
           <NavBar/>
           <Switch>
@@ -54,16 +25,6 @@ class Routes extends Component {
             <Route exact path="/ticker/:symbol" component={Ticker} />
           </Switch>
         </div>
-      );
-    } else {
-      return <Password callback={this.updateAuth}/>
-    }
-  }
-
-  render() {
-    return (
-      <Router>
-        {this.getRoutes()}
       </Router>
     );
   }
