@@ -1,0 +1,431 @@
+$background-color: #292A32;
+$text-color: #FFFEFE;
+$theme-color: #3E6EBB;
+$profit-color: #21CE99;
+$loss-color: #E8542C;
+$complimentary-theme-color: #11A074;
+$complimentary-color: #393B43;
+$tertiary-color: #464857;
+$max-width: 1000px;
+$font-family: 'DIN';
+
+@import "progressbar.scss";
+
+@font-face {
+  font-family: 'DIN';
+  font-display: auto;
+  src: url('../assets/fonts/din_regular.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: auto;
+  src: url('../assets/fonts/din_medium.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: auto;
+  src: url('../assets/fonts/din_bold.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: auto;
+  src: url('../assets/fonts/din_black.otf') format('opentype');
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+}
+
+a { text-decoration: none !important; }
+.link {
+  text-decoration: none !important;
+  color: $text-color;
+}
+
+.center {
+  position: relative;
+}
+
+.password-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: $font-family;
+  font-weight: 200;
+  font-size: 20px;
+  width: 350px;
+  height: 30px;
+  padding: 6px 10px;
+  margin: 20% 0 0 -181px;
+  outline: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid $complimentary-color;
+  background-color: $complimentary-color;
+  color: $text-color;
+}
+
+.password-box::placeholder {
+  font-weight: 200;
+  color: $tertiary-color;
+  opacity: 0.8;
+}
+
+.password-box:focus {
+  outline: none;
+  border: 2px solid $tertiary-color;
+  border-radius: 10px;
+}
+
+.password-box:focus::placeholder {
+  color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.navbar {
+  max-width: $max-width;
+  margin: 20px auto;
+}
+
+.navbar-title {
+  float: left;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar-sections {
+  float: right !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.clear {
+  clear: both;
+}
+
+.page-main-div {
+  max-width: $max-width;
+  margin: auto;
+  padding: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+table {
+  max-width: $max-width;
+  border-collapse: collapse;
+  margin: auto;
+  font-family: $font-family;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  font-weight: 700;
+  color: $tertiary-color;
+}
+
+th {
+  font-weight: 200;
+}
+
+tr:hover {
+  background-color:$complimentary-color;
+}
+
+.totals {
+  padding: 7px 12px;
+  font-weight: 400;
+  font-size: 13px;
+  background-color: $background-color;
+  font-family: $font-family;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: $tertiary-color;
+  border: 0;
+  border-radius: 10px;
+  display: inline;
+  margin-left: 5px;
+}
+
+.totals:hover {
+  background-color: $complimentary-color;
+  color: $background-color;
+}
+
+.ticker-open-stripes,
+.ticker-open {
+  display: inline-block;
+  color: $text-color;
+  background-color: $tertiary-color;
+  width: 60px;
+  max-width: 60px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.ticker-color-loss-stripes,
+.ticker-color-loss {
+  display: inline-block;
+  color: $text-color;
+  background-color: $loss-color;
+  width: 60px;
+  max-width: 60px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.ticker-color-profit-stripes,
+.ticker-color-profit {
+  display: inline-block;
+  color: $text-color;
+  background-color: $profit-color;
+  width: 60px;
+  max-width: 60px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.ticker-open-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    $tertiary-color,
+    $tertiary-color 10px,
+    $complimentary-color 10px,
+    $complimentary-color 20px
+  );
+}
+
+.ticker-color-loss-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    lighten($loss-color, 5%),
+    lighten($loss-color, 5%) 10px,
+    $loss-color 10px,
+    $loss-color 20px
+  );
+}
+
+.ticker-color-profit-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    lighten($profit-color, 10%),
+    lighten($profit-color, 10%) 10px,
+    $profit-color 10px,
+    $profit-color 20px
+  );
+}
+
+.ticker-totals,
+.open-totals,
+.closed-totals {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: $background-color;
+  border-radius: 10px;
+  max-width: none;
+  padding: 0;
+  position: fixed;
+  z-index: 100;
+  bottom: 10px;
+}
+
+.ticker-totals {
+  left: 50%;
+  width: 420px;
+  margin-left: -210px;
+}
+
+.closed-totals {
+  left: 50%;
+  width: 620px;
+  margin-left: -310px;
+}
+
+.open-totals {
+  padding: 0 10px;
+  left: 50%;
+  width: 66px;
+  margin-left: -33px;
+}
+
+.closed-total-profit {
+  font-weight: 400;
+  color: $profit-color;
+}
+
+.closed-total-loss {
+  font-weight: 400;
+  color: $loss-color;
+}
+
+.loss {
+  font-weight: 200;
+  color: $loss-color;
+}
+
+.profit {
+  font-weight: 200;
+  color: $profit-color;
+}
+
+.neutral {
+  font-weight: 200;
+  color: $text-color;
+}
+
+.sort {
+  color: $text-color;
+  opacity: 0.3;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.closed-totals-subdiv {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.closed-total-div {
+  float: left;
+  text-align: center;
+  padding-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -8px;
+}
+
+.open-total-div {
+  margin-top: -8px;
+  text-align: center;
+}
+
+.open-total-numbers,
+.closed-total-numbers {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.open-total-labels,
+.closed-total-labels {
+  font-size: 8px;
+}
+
+.ticker-title {
+  font-size: 36px;
+  font-weight: 200;
+  color: $tertiary-color;
+  margin-bottom: 0px;
+}
+
+.tooltip {
+  background-color: $tertiary-color;
+  border-radius: 10px;
+  padding: 1px 10px;
+}
+
+.tooltip-label {
+  font-weight: 600;
+  color: $background-color;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.tooltip-payload {
+  font-weight: 200;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.closed {
+  color: $background-color;
+  background-color: $tertiary-color;
+  padding: 2px 5px;
+  border-radius: 2px;
+  font-weight: 200;
+}
+
+.spacing-div {
+  height: 50px;
+  display: block;
+}
+
+.expiry-year {
+  color: $loss-color;
+}
+
+.not-expiry-year {
+  color: $profit-color;
+}
+
+.sort-button {
+  background-color: $tertiary-color;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 0;
+  color: white;
+}
+.sort-button:focus {
+  outline: 0;
+  background-color: $complimentary-color;
+}
+
+.graph-2-box {
+  float: left;
+  width: 46%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.halfway-timeline-alert {
+  padding: 12px;
+  border-radius: 5px;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    background: opacify($loss-color, .25);
+  }
+
+  100% {
+    background: lighten($loss-color, 5%);
+  }
+}
+
+.transparent {
+  opacity: 0.9;
+}

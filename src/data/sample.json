@@ -1,0 +1,112 @@
+[
+ {
+   "id": 1,
+   "ticker": "VGT",
+   "strike": 250,
+   "type": "CALL",
+   "expiry": "03/23/2020",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "03/01/2020", "contracts": 1, "price": 2.25 },
+     { "eventid": 2, "action": "EXPIRY", "date": "03/23/2020", "contracts": 1, "price": 0}
+   ],
+   "close": 220.56,
+   "high": 235.80,
+   "low":	230.95
+ },
+ {
+   "id": 2,
+   "ticker": "LYFT",
+   "strike": 32.5,
+   "type": "PUT",
+   "expiry": "03/13/2020",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "03/05/2020", "contracts": 1, "price": 0.48 },
+     { "eventid": 2, "action": "SELL", "date": "03/10/2020", "contracts": 1, "price": 3.25 }
+   ],
+   "close": 24.17,
+   "high": 39.47,
+   "low": 36.57
+ },
+ {
+   "id": 3,
+   "ticker": "GRPN",
+   "strike": 1,
+   "type": "PUT",
+   "expiry": "03/13/2020",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "03/09/2020", "contracts": 2, "price": 0.08 },
+     { "eventid": 2, "action": "SELL", "date": "03/11/2020", "contracts": 2, "price": 0.13 }
+   ],
+   "close": 0.83,
+   "high": 1.04,
+   "low": 0.97
+ },
+ {
+   "id": 4,
+   "ticker": "USO",
+   "strike": 6,
+   "type": "CALL",
+   "expiry": "01/15/2021",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "04/02/2020", "contracts": 2, "price": 1.00 }
+   ],
+   "close": "",
+   "high": 3.78,
+   "low": 3.00
+ },
+ {
+   "id": 5,
+   "ticker": "DAL",
+   "strike": 40,
+   "type": "CALL",
+   "expiry": "01/15/2021",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "04/07/2020", "contracts": 2, "price": 1.30 }
+   ],
+   "close": "",
+   "high": 25.85,
+   "low": 21.90
+ },
+ {
+   "id": 6,
+   "ticker": "SPY",
+   "strike": 250,
+   "type": "PUT",
+   "expiry": "05/11/2020",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "04/24/2020", "contracts": 1, "price": 0.60 }
+   ],
+   "close": "",
+   "high": 283.70,
+   "low": 278.50
+ },
+ {
+   "id": 19,
+   "ticker": "UAL",
+   "strike": 85,
+   "type": "CALL",
+   "expiry": "09/18/2020",
+   "events": [
+     { "eventid": 1, "action": "BUY", "date": "03/17/2020", "contracts": 1, "price": 1.00 },
+     { "eventid": 2, "action": "BUY", "date": "03/18/2020", "contracts": 2, "price": 0.56 },
+     { "eventid": 3, "action": "BUY", "date": "03/18/2020", "contracts": 2, "price": 0.30 },
+     { "eventid": 4, "action": "BUY", "date": "04/03/2020", "contracts": 10, "price": 0.16 },
+     { "eventid": 5, "action": "BUY", "date": "04/03/2020", "contracts": 20, "price": 0.12 },
+     { "eventid": 6, "action": "BUY", "date": "04/03/2020", "contracts": 20, "price": 0.12 },
+     { "eventid": 7, "action": "BUY", "date": "04/22/2020", "contracts": 10, "price": 0.17 },
+     { "eventid": 8, "action": "BUY", "date": "04/22/2020", "contracts": 5, "price": 0.15 },
+     { "eventid": 9, "action": "BUY", "date": "04/24/2020", "contracts": 10, "price": 0.12 },
+     { "eventid": 10, "action": "BUY", "date": "04/29/2020", "contracts": 1, "price": 0.19 },
+     { "eventid": 11, "action": "SELL", "date": "04/29/2020", "contracts": 1, "price": 0.15 },
+     { "eventid": 12, "action": "SELL", "date": "04/29/2020", "contracts": 20, "price": 0.16 },
+     { "eventid": 13, "action": "SELL", "date": "04/29/2020", "contracts": 5, "price": 0.17 },
+     { "eventid": 14, "action": "SELL", "date": "04/29/2020", "contracts": 5, "price": 0.17 },
+     { "eventid": 15, "action": "SELL", "date": "04/29/2020", "contracts": 20, "price": 0.15 },
+     { "eventid": 16, "action": "SELL", "date": "04/29/2020", "contracts": 4, "price": 0.16 },
+     { "eventid": 17, "action": "SELL", "date": "04/29/2020", "contracts": 1, "price": 0.16 }
+   ],
+   "close": "",
+   "high": 38.14,
+   "low": 30.05
+ }
+]

@@ -1,0 +1,3 @@
+Order Deny,Allow
+Deny from all
+Allow from 24.5.178.85
